@@ -3,7 +3,9 @@
   "scripts": {
   
     
-  "dev": "nodemon index.js | pino-colada"
+  "dev": "nodemon index.js | pino-colada",
+  "start" : "node index.js"
+
   
   },
   

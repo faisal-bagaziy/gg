@@ -69,6 +69,8 @@ app.listen(port, () => {
 })
 */
 
+const { env } = require('process');
+
 // Initallize arrays to getFrom, post, del
 const restaurant = ['KFC' , 'Mcdonlads' , 'Shwayt Alkhaleej'];
 const toyotaCars = ['Camry' , 'Corlla' , 'Land Cruiser'];
@@ -107,11 +109,16 @@ fastify.get('/makeUp', async (request, reply) => {
     restaurant.pop()
     return restaurant;
   }) 
-
+const host = process.env.NODE_ENV === 'production'? '0.0.0.0' :'127.0.0'
+const port = process.env.$PORT || process.env.PORT ||3000
 // Run the server!
 const start = async () => {
     try {
-        await fastify.listen({ port: 3000 })
+        await fastify.listen({ 
+        port: port ,
+        host: host
+    
+    })
     } catch (err) {
         fastify.log.error(err)
         process.exit(1)
