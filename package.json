@@ -1,0 +1,32 @@
+{
+  
+  "scripts": {
+  
+    
+  "dev": "nodemon index.js | pino-colada"
+  
+  },
+  
+  "dependencies": {
+  
+    
+  "express": "^4.18.1",
+  
+    
+  "fastify": "^4.5.3"
+  
+  },
+  
+  "devDependencies": {
+  
+    
+  "nodemon": "^2.0.19",
+  
+    
+  "pino-colada": "^2.2.2",
+  
+    
+  "pino-pretty": "^9.1.0"
+  
+  }
+}
