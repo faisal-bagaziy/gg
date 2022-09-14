@@ -109,7 +109,7 @@ fastify.get('/makeUp', async (request, reply) => {
     restaurant.pop()
     return restaurant;
   }) 
-const host = process.env.NODE_ENV === 'production'? '0.0.0.0' :'127.0.0'
+const host = process.env.NODE_ENV === 'production'? '0.0.0.0' :'127.1'
 const port = process.env.$PORT || process.env.PORT ||3000
 // Run the server!
 const start = async () => {
